@@ -16,14 +16,20 @@
   <body>
     <div class="appBox">
       <header>
-        <form>
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="search-form-input"
+            id="search-form-input"
           />
-          <input type="submit" value="Search" class="search-form-submit" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-form-submit"
+            id="search-form-submit"
+          />
         </form>
       </header>
 
@@ -31,7 +37,7 @@
         <div class="weather-app-data">
           <div>
             <h1 class="weather-app-city">
-              New York <span class="comic-relief-regular"></span>
+              <span class="comic-relief-regular" id="city"> New York </span>
             </h1>
             <p class="weather-app-details">
               Wednesday 12:00, scattered clouds
@@ -57,5 +63,6 @@
         <a href="https://vanilluhweathuh.netlify.app/">Netlify</a>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
