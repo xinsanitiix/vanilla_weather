@@ -23,7 +23,7 @@ function updateWeatherDetails(response) {
 }
 
 function formatDate(date) {
-  let minutes = date.getMinutes().toString().padStart(2, "0");
+  let minutes = date.getMinutes();
   let hours = date.getHours().toString().padStart(2, "0");
   let days = [
     "Sunday",
