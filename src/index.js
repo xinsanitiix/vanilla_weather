@@ -17,6 +17,9 @@ function updateWeatherDetails(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = `${formatDate(date)}`;
+
+  let iconElement = document.querySelector("#icon-image");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt="${response.data.condition.description}">`;
 }
 
 function formatDate(date) {
