@@ -51,8 +51,13 @@ function searchCity(city) {
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
-
   searchCity(searchInput.value);
+}
+
+function getForecast(city) {
+  let apiKey = "7178db21973o74a8d48ft4f8cf3f740b";
+  let apiUrl = `api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  console.log(apiUrl);
 }
 
 function displayForecast() {
@@ -72,6 +77,7 @@ function displayForecast() {
 </div>
 </div>`;
   });
+
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -79,4 +85,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("New York");
-displayForecast();
+getForecast("New York");
+displayForecast("");
